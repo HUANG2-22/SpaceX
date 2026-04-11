@@ -820,28 +820,30 @@ main > .section:first-of-type {
 }
 
 .collaboration__partners {
+  position: relative;
   width: 100%;
   min-height: 240px;
+  aspect-ratio: 5 / 2;
   border-radius: 18px;
   border: none;
   background: #ffffff;
   box-shadow: 0 6px 28px rgba(15, 40, 90, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  /* 圆角裁切由本层完成；子图铺满后再被此处遮罩 */
+  isolation: isolate;
 }
 
 .collaboration__partners-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 1.25rem;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .collaboration__partners-img--ph {
-  object-fit: cover;
-  padding: 0;
   opacity: 0.95;
 }
 
@@ -885,6 +887,25 @@ main > .section:first-of-type {
   border: 1px solid rgba(0, 102, 255, 0.12);
   background: linear-gradient(160deg, rgba(0, 102, 255, 0.05), rgba(124, 58, 237, 0.04));
   box-shadow: 0 10px 28px rgba(15, 40, 90, 0.05);
+}
+
+.contact-schedule {
+  margin-bottom: 1.35rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-schedule__btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem 1.05rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.contact-schedule__btn.btn--primary {
+  box-shadow: 0 6px 16px rgba(0, 102, 255, 0.2);
 }
 
 .contact-dl {

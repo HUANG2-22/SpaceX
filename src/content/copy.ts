@@ -33,6 +33,7 @@ export type SiteCopy = {
   }
   contact: {
     title: string
+    bookMeetingLabel: string
     emailLabel: string
     scholarLabel: string
     locationLabel: string
@@ -122,6 +123,7 @@ export const COPY: Record<Locale, SiteCopy> = {
     },
     contact: {
       title: 'Contact',
+      bookMeetingLabel: 'Book personal meeting',
       emailLabel: 'Email',
       scholarLabel: 'Google Scholar',
       locationLabel: 'Affiliation',
@@ -208,6 +210,7 @@ export const COPY: Record<Locale, SiteCopy> = {
     },
     contact: {
       title: '联系方式',
+      bookMeetingLabel: '预约个人会议',
       emailLabel: '邮箱',
       scholarLabel: 'Google Scholar',
       locationLabel: '单位',

@@ -30,7 +30,7 @@ function splitAuthorsRest(s: string): { authors: string; rest: string } {
 
 function splitTitleVenue(rest: string): { title: string; venue: string } {
   const re =
-    /\.\s+(?=The Innovation|Angewandte Chemie|Journal of the American|Accounts of Materials|Physical Review Materials|Advanced Materials|Advanced Energy Materials|Advanced Functional Materials|Nature Communications|Applied Catalysis|Chemical Engineering Journal|Journal of Energy Chemistry|ACS Sensors|Journal of Colloid|ACS Sustainable Chemistry|Nano Research Energy|National Science Review|PRX Energy|Nature Catalysis|Journal of Alloys and Compounds|Science \(|\(|The Innovation\b)/i
+    /\.\s+(?=The Innovation|Angewandte Chemie|Journal of the American|Accounts of Materials|Physical Review Materials|Advanced Materials|Advanced Energy Materials|Advanced Functional Materials|Nature Communications|Applied Catalysis|Chemical Engineering Journal|Journal of Energy Chemistry|ACS Sensors|Journal of Colloid|ACS Sustainable Chemistry|Nano Research Energy|Nano Research,|Energy Storage Materials|Carbon\b|Nano Energy|Journal of Materials Chemistry A|National Science Review|PRX Energy|Nature Catalysis|Journal of Alloys and Compounds|Science \(|\(|The Innovation\b)/i
   const idx = rest.search(re)
   if (idx > 0) {
     return {
